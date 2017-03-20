@@ -1,0 +1,40 @@
+{
+  "name": "once-then",
+  "version": "1.0.0",
+  "description": "Add onceThen to your emitter to convert an event to a Promise.",
+  "keywords": [
+    "events",
+    "promises"
+  ],
+  "author": "Dieter Luypaert <dieterluypaert@icloud.com>",
+  "license": "MIT",
+  "repository": "git@github.com:Moeriki/node-once-then.git",
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint *.js",
+    "test": "jest",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "precommit": "lint-staged",
+    "prepush": "npm test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.11.15",
+    "eslint": "^3.18.0",
+    "eslint-config-muriki": "^8.5.3",
+    "eslint-plugin-import": "~2.2.0",
+    "eslint-plugin-jasmine": "~2.2.0",
+    "eslint-plugin-node": "^4.2.1",
+    "husky": "^0.13.1",
+    "jest": "^19.0.2",
+    "lint-staged": "^3.4.0"
+  },
+  "jest": {
+  },
+  "lint-staged": {
+    "lib/*.js": "eslint"
+  }
+}
