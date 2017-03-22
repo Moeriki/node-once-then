@@ -35,7 +35,7 @@ const onceThen = require('once-then');
 ```js
 const emitter = new EventEmitter();
 
-onceThen(emitter, myEventName').then(() => {
+onceThen(emitter, 'myEventName').then(() => {
   //
 });
 
