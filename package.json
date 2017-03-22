@@ -20,7 +20,9 @@
     "precommit": "lint-staged",
     "prepush": "npm test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "register-toggle": "^2.1.0"
+  },
   "devDependencies": {
     "coveralls": "^2.11.15",
     "eslint": "^3.18.0",

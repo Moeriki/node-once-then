@@ -42,10 +42,12 @@ onceThen(emitter, myEventName').then(() => {
 emitter.emit('myEventName');
 ```
 
-### Patch
+### Register
+
+Register `onceThen` on an object.
 
 ```js
-onceThen.patch(EventEmitter);
+onceThen.register(EventEmitter.prototype);
 
 const emitter = new EventEmitter();
 

@@ -15,14 +15,18 @@ it('should resolve with event args', () => {
   return promise;
 });
 
-describe('patch', () => {
+describe('register', () => {
 
-  it('should patch EventEmitter', () => {
+  it('should register EventEmitter', () => {
     onceThen.patch(EventEmitter.prototype);
     const evts = new EventEmitter();
     const promise = evts.onceThen('myEventName');
     evts.emit('myEventName');
     return promise;
+  });
+
+  it('should alias patch', () => {
+    expect(onceThen.patch).toBe(onceThen.register);
   });
 
 });

@@ -1,8 +1,10 @@
 'use strict';
 
+const toggle = require('register-toggle');
+
 // private
 
-function protoOnceThen(eventName) {
+function onceThen(eventName) {
   return new Promise((resolve) => {
     this.once(eventName, function () {
       const args = Array.prototype.slice.call(arguments);
@@ -11,14 +13,14 @@ function protoOnceThen(eventName) {
   });
 }
 
+const register = (object) => toggle({
+  extend: object,
+  properties: { onceThen },
+});
+
 // exposed
 
-function onceThen(emitter, eventName) {
-  protoOnceThen.call(emitter, eventName);
-}
+module.exports = (emitter, eventName) => onceThen.call(emitter, eventName);
 
-onceThen.patch = (proto) => {
-  proto.onceThen = protoOnceThen;
-};
-
-module.exports = onceThen;
+module.exports.patch = register;
+module.exports.register = register;
