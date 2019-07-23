@@ -24,15 +24,15 @@
     "register-toggle": "^2.1.0"
   },
   "devDependencies": {
-    "coveralls": "^2.11.15",
-    "eslint": "^3.18.0",
-    "eslint-config-muriki": "^8.5.3",
-    "eslint-plugin-import": "~2.2.0",
-    "eslint-plugin-jasmine": "~2.2.0",
-    "eslint-plugin-node": "^4.2.1",
-    "husky": "^0.13.1",
-    "jest": "^19.0.2",
-    "lint-staged": "^3.4.0"
+    "coveralls": "^3.0.5",
+    "eslint": "^6.1.0",
+    "eslint-config-muriki": "^10.0.1",
+    "eslint-plugin-import": "~2.18.2",
+    "eslint-plugin-jasmine": "~2.10.1",
+    "eslint-plugin-node": "^9.1.0",
+    "husky": "^3.0.1",
+    "jest": "^24.8.0",
+    "lint-staged": "^9.2.0"
   },
   "lint-staged": {
     "lib/*.js": "eslint"
